@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as mix;
+
+.certifications {
+  padding: 8rem 1rem;
+
+  &__item-wrapper {
+    @include mix.respond(sm) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mix.respond(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mix.respond(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__image {
+    width: 25rem;
+    height: auto;
+  }
+}
