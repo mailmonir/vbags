@@ -40,11 +40,13 @@ const Navbar = () => {
           className="logo-white"
           src="../images/logo-white.png"
           alt="Victor Bags BD Logo White"
+          layout="fullWidth"
         />
         <StaticImage
           className="logo"
           src="../images/logo.png"
           alt="Victor Bags BD Logo"
+          layout="fullWidth"
         />
       </Link>
 
