@@ -23,6 +23,11 @@
     rgba(var.$color-secondary, 0.9),
     rgba(var.$color-secondary, 0.9)
   );
+  .heading-primary--sub {
+    max-width: 100rem;
+    letter-spacing: 1rem;
+    text-align: center;
+  }
   position: absolute;
   left: 0;
   top: 0;

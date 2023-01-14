@@ -5,16 +5,52 @@ import { useKeenSlider } from "keen-slider/react"
 import { StaticImage } from "gatsby-plugin-image"
 
 export default function BgSlider() {
+  // const [sliderRef] = useKeenSlider(
+  //   {
+  //     loop: true,
+  //     duration: 5000,
+  //     dragStart: () => {
+  //       autoplay(false)
+  //     },
+  //     dragEnd: () => {
+  //       autoplay(true)
+  //     },
+  //   },
+  //   [
+  //     slider => {
+  //       let timeout
+  //       let mouseOver = false
+  //       function clearNextTimeout() {
+  //         clearTimeout(timeout)
+  //       }
+  //       function nextTimeout() {
+  //         clearTimeout(timeout)
+  //         if (mouseOver) return
+  //         timeout = setTimeout(() => {
+  //           slider.next()
+  //         }, 5000)
+  //       }
+  //       slider.on("created", () => {
+  //         slider.container.addEventListener("mouseover", () => {
+  //           mouseOver = true
+  //           clearNextTimeout()
+  //         })
+  //         slider.container.addEventListener("mouseout", () => {
+  //           mouseOver = false
+  //           nextTimeout()
+  //         })
+  //         nextTimeout()
+  //       })
+  //       slider.on("dragStarted", clearNextTimeout)
+  //       slider.on("animationEnded", nextTimeout)
+  //       slider.on("updated", nextTimeout)
+  //     },
+  //   ]
+  // )
+
   const [sliderRef] = useKeenSlider(
     {
       loop: true,
-      duration: 5000,
-      dragStart: () => {
-        // autoplay(false)
-      },
-      dragEnd: () => {
-        // autoplay(true)
-      },
     },
     [
       slider => {
@@ -65,7 +101,7 @@ export default function BgSlider() {
               </span>
             </h1>
 
-            <Link href="/products" className="btn btn--white btn--animated">
+            <Link to="/products" className="btn btn--white btn--animated">
               Discover our products
             </Link>
           </div>
@@ -80,14 +116,7 @@ export default function BgSlider() {
         <div className="overlay">
           <div className="overlay__text-box">
             <h1 className="heading-primary">
-              <span
-                className="heading-primary--main"
-                // style={{
-                //   fontSize: "3rem",
-                //   letterSpacing: "1.1rem",
-                //   maxWidth: "100rem",
-                // }}
-              >
+              <span className="heading-primary--sub">
                 A bag manufacturer, we have served more than ten well known
                 brands and have passed ISO9001, BSCI, SEDEX and other
                 certifications
@@ -105,22 +134,13 @@ export default function BgSlider() {
         <div className="overlay">
           <div className="overlay__text-box">
             <h1 className="heading-primary">
-              <span
-                className="heading-primary--main"
-                // style={{ letterSpacing: 1 }}
-              >
-                Design & Developement
-              </span>
-              <span
-                className="heading-primary--sub"
-                // style={{ maxWidth: "100rem", letterSpacing: 1 }}
-              >
+              <span className="heading-primary--main">Development Design</span>
+              <span className="heading-primary--sub">
                 According to trend of developent, continue to develop new styles
                 and new features to product
               </span>
             </h1>
-
-            <Link href="/about" className="btn btn--white btn--animated">
+            <Link to="/about" className="btn btn--white btn--animated">
               More about us
             </Link>
           </div>
@@ -132,8 +152,31 @@ export default function BgSlider() {
           alt="slider image four"
           className="slider-image"
         />
-        <div className="overlay"></div>
+        <div className="overlay">
+          <div className="overlay__text-box">
+            <h1 className="heading-primary">
+              <span className="heading-primary--main">Hello world!</span>
+              <span className="heading-primary--sub">
+                A bag manufacturer, we have served more than ten well known
+                brands and have passed ISO9001, BSCI, SEDEX and other
+                certifications
+              </span>
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   )
+}
+
+{
+  /* <h1 className="heading-primary">
+              <span className="heading-primary--main">
+                Design & Developement
+              </span>
+              <span className="heading-primary--sub">
+                According to trend of developent, continue to develop new styles
+                and new features to product
+              </span>
+            </h1> */
 }

@@ -3,7 +3,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Isotope from "isotope-layout"
 
 const IsoProducts = ({ products }) => {
-  console.log(products)
   const categoriesSet = new Set()
   products.forEach(product => {
     categoriesSet.add(product.productName)
@@ -38,7 +37,7 @@ const IsoProducts = ({ products }) => {
       <ul className="filter-list">
         <li className="filter-list__item">
           <a
-            href="javascript:void(0)"
+            href="/#"
             className="btn btn--red btn--small"
             onClick={handleFilterKeyChange("*")}
           >
@@ -49,7 +48,7 @@ const IsoProducts = ({ products }) => {
           [...categoriesSet].map((category, index) => (
             <li className="filter-list__item" key={index}>
               <a
-                href="javascript:void(0)"
+                href="/#"
                 className="btn btn--red btn--small"
                 onClick={handleFilterKeyChange(
                   category.replace(/\s/g, "").toLowerCase()
