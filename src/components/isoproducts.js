@@ -37,7 +37,7 @@ const IsoProducts = ({ products }) => {
       <ul className="filter-list">
         <li className="filter-list__item">
           <a
-            href="/#"
+            href="javascript:void(0);"
             className="btn btn--red btn--small"
             onClick={handleFilterKeyChange("*")}
           >
@@ -48,7 +48,7 @@ const IsoProducts = ({ products }) => {
           [...categoriesSet].map((category, index) => (
             <li className="filter-list__item" key={index}>
               <a
-                href="/#"
+                href="javascript:void(0);"
                 className="btn btn--red btn--small"
                 onClick={handleFilterKeyChange(
                   category.replace(/\s/g, "").toLowerCase()
